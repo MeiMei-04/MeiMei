@@ -176,6 +176,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Nhân Viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDoubleClick);
             // 
             // panel3
             // 

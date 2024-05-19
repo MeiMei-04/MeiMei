@@ -61,5 +61,12 @@ namespace MeiMei.views
                 flogin.Show();
             }
         }
+
+        private void label1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            fThongTinNhanVien fThongTinNhanVien = new fThongTinNhanVien();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(fThongTinNhanVien);
+        }
     }
 }

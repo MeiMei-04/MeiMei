@@ -36,10 +36,10 @@ namespace MeiMei.views
             label5.Text = "Giờ Kết Thúc: " + calam.GioKetThuc;
             if(calam.TrangThai == 1)
             {
-                label6.Text = "Chưa Làm";
+                label6.Text = "Trạng Thái: Chưa Làm";
             }else
             {
-                label6.Text = "Đã Làm";
+                label6.Text = "Trạng Thái: Đã Làm";
             }
         }
         static bool IsCurrentTimeWithinRange(TimeSpan start, TimeSpan end)
