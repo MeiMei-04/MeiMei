@@ -16,20 +16,21 @@ namespace MeiMei.views
     {
         ThucDonRepository thucDonRepository = new ThucDonRepository();
         ChiTietHoaDonRepository chiTietHoaDonRepository = new ChiTietHoaDonRepository();
+        HoaDonRepository hoaDonRepository = new HoaDonRepository();
         string tenban = null;
-        int id = -1;
+        int idhd = -1;
         int tongtien = 0;
-        public fdatmon(string tenban, int id)
+        public fdatmon(string tenban, int idhd)
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
             this.tenban = tenban;
-            this.id = id;
+            this.idhd = idhd;
             fillChiTietHoaDon();
         }
         void oderThucDon()
         {
-            List<ChiTietHoaDon> lst = chiTietHoaDonRepository.getChiTietHoaDonById(this.id);
+            List<ChiTietHoaDon> lst = chiTietHoaDonRepository.getChiTietHoaDonById(this.idhd);
             DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
             if(selectedRow != null)
             {
@@ -37,6 +38,7 @@ namespace MeiMei.views
                 int gia = Convert.ToInt32(selectedRow.Cells[2].Value);
                 int soluong = 1;
                 int giatien = 0;
+                bool flag = false;
                 foreach (var item in lst)
                 {
                     if (item.ThucDonID == idtd)
@@ -44,14 +46,21 @@ namespace MeiMei.views
                         item.SoLuong += soluong;
                         giatien = item.SoLuong * gia;
                         chiTietHoaDonRepository.updateSoLuong(idtd, item.SoLuong, giatien);
+                        flag = true;
                     }
+                }
+                if(flag == false)
+                {
+                    chiTietHoaDonRepository.themMon(idhd, idtd, gia);
+
                 }
             }
         }
         void fillChiTietHoaDon()
         {
+            tongtien = 0;
             dataGridView2.Rows.Clear();
-            List<ChiTietHoaDon> lst = chiTietHoaDonRepository.getChiTietHoaDonById(this.id);
+            List<ChiTietHoaDon> lst = chiTietHoaDonRepository.getChiTietHoaDonById(this.idhd);
             if(lst == null)
             {
                 return;
@@ -89,6 +98,12 @@ namespace MeiMei.views
         {
             oderThucDon();
             fillChiTietHoaDon();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            hoaDonRepository.thanhtoan(idhd, tongtien);
+            this.Hide();
         }
     }
 }

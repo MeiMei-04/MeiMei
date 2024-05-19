@@ -71,6 +71,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Thanh Toán";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 

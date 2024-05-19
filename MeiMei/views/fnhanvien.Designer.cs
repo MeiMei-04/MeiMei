@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fnhanvien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnOder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,12 +44,28 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightPink;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnOder);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(212, 562);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Magenta;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 509);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 40);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Đăng Xuất";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnOder
             // 
@@ -108,6 +125,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Nhân Viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDoubleClick);
             // 
             // panel3
             // 
@@ -142,5 +160,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOder;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
     }
 }

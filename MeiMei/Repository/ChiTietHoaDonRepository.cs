@@ -64,5 +64,43 @@ namespace MeiMei.Repository
                 }
             }
         }
+        public void themMon(int idhd, int idtd,int dongia)
+        {
+            string query = "INSERT INTO ChiTietHoaDon (id_hd, id_td, soluong, dongia, trangthai)\r\nVALUES \r\n    (@idhd, @idtd, 1, @dongia, 1)";
+            using (SqlConnection conn = new SqlConnection(connectString))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@idhd", idhd);
+                    command.Parameters.AddWithValue("@idtd", idtd);
+                    command.Parameters.AddWithValue("@dongia", dongia);
+                    int row = command.ExecuteNonQuery();
+                    if (row > 0)
+                    {
+                        Console.WriteLine("Thêm Thành Công");
+                    }
+                }
+            }
+        }
+        public void thanhtoan(int idhd)
+        {
+            string query = "UPDATE ChiTietHoaDon set trangthai = 2 where id_hd = @idhd";
+            using (SqlConnection conn = new SqlConnection(connectString))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@idhd", idhd);
+                    int row = command.ExecuteNonQuery();
+                    if (row > 0)
+                    {
+                        Console.WriteLine("Thanh Toán Thành Công");
+                    }
+                }
+            }
+        }
     }
 }

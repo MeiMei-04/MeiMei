@@ -46,14 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Repository\CalamRepository.cs" />
     <Compile Include="Repository\ChiTietHoaDonRepository.cs" />
     <Compile Include="Repository\HoaDonRepository.cs" />
     <Compile Include="Repository\ThucDonRepository.cs" />
+    <Compile Include="util\Dateutil.cs" />
     <Compile Include="views\fdatmon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="views\fdatmon.Designer.cs">
       <DependentUpon>fdatmon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\fHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\fHoaDon.Designer.cs">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="views\flogin.cs">
       <SubType>Form</SubType>
@@ -83,14 +91,41 @@
     <Compile Include="views\foder.Designer.cs">
       <DependentUpon>foder.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\fQlCaLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\fQlCaLam.Designer.cs">
+      <DependentUpon>fQlCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\fQlyThucDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\fQlyThucDon.Designer.cs">
+      <DependentUpon>fQlyThucDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\fquanly.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\fquanly.Designer.cs">
       <DependentUpon>fquanly.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\fQLNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\fQLNV.Designer.cs">
+      <DependentUpon>fQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\fThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\fThongTinNhanVien.Designer.cs">
+      <DependentUpon>fThongTinNhanVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\fdatmon.resx">
       <DependentUpon>fdatmon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fHoaDon.resx">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\flogin.resx">
       <DependentUpon>flogin.cs</DependentUpon>
@@ -109,6 +144,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\foder.resx">
       <DependentUpon>foder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fQlCaLam.resx">
+      <DependentUpon>fQlCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fQlyThucDon.resx">
+      <DependentUpon>fQlyThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fquanly.resx">
+      <DependentUpon>fquanly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fQLNV.resx">
+      <DependentUpon>fQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\fThongTinNhanVien.resx">
+      <DependentUpon>fThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

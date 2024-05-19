@@ -11,6 +11,7 @@ namespace MeiMei.Model
         public int ID { get; set; }
         public string TenBan { get; set; }
         public int NhanVienID { get; set; }
+        public string HoTen { get; set; }
         public DateTime NgayTao { get; set; }
         public DateTime? NgayThanhToan { get; set; }
         public int TongTien { get; set; }
@@ -29,6 +30,17 @@ namespace MeiMei.Model
             this.ID = id;
             this.TenBan = tenban;
             this.NhanVienID = id_nv;
+            this.NgayTao = ngaytao;
+            this.NgayThanhToan = ngaythanhtoan;
+            this.TongTien = tongtien;
+            this.TrangThai = trangthai;
+        }
+        public HoaDon(int id, string tenban, int id_nv,String hoten, DateTime ngaytao, DateTime? ngaythanhtoan, int tongtien, int trangthai)
+        {
+            this.ID = id;
+            this.TenBan = tenban;
+            this.NhanVienID = id_nv;
+            this.HoTen = hoten;
             this.NgayTao = ngaytao;
             this.NgayThanhToan = ngaythanhtoan;
             this.TongTien = tongtien;

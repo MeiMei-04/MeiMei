@@ -117,29 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        iQAAAIkBOZtwtgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHuSURBVEhLrdXP
-        K2ZRHMfxi0gSY+RHTVLMYiY1KVlYkh8L8yM0KQsbkxo1msZipsiPhWRhw4KSpJlSZjMWmiSFYaZQ0mxm
-        odnORvEnzPtzzr0c3Hs9bj716n7P8zz3+d5f51zvHlKAJrzBS+TjXpKOYexgED3+eB9D0PeJk4YlvPdr
-        pd3f6o/VcNGMEqYDk7Y06ccZus3IZhZttrzMFA5T8A8PoJRhG4U4QA6UUqzb8jI/kGHLyOiS7NnSRDf1
-        GC9QoQ+c/PK3F9GOwTWNig5AN9ZNFSagM3H3/+lvL+J+UIO3yDajq9lFli29cny2pTniPFt6ubh+IFca
-        /MYM3kE3b8XxF30IoifmBO6N/wT3NyZug2noplVDR6sJFSjCFuoRZMzfKs+xiUwzcuI20POs04zKQ6xi
-        AS14hlZ8wVeEzmi3wXccoRmVaAyh610HXXv96ShqERm3gab8N+j6N+BjCM0BZQ46g1vjNiiGji6VJGrQ
-        i2U8MqP4JGrwB+P4AC3FGyE0wZREDbowjxIzik+iBndJbAM9y8Epnzt1FE3A64ltoMfRnaW3ubFCktgG
-        YTvEJez3Wuwe2/Jm1vDUlilFi51W2iB68eglFPkOfgJdJr1HX6dgAKcYgd7JOiMtG7HRovYKmlx30QnN
-        +Ih43n950XFW+C9ytQAAAABJRU5ErkJggg==
-</value>
-  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -151,16 +141,10 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        rgAAAK4B+ff3XQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFESURBVEhL7dNL
-        K4RRHIDxSUTWFOUDSIoQZUEuhaIsLNjZsbSwJyXZ2bgvrJSlOyG5JRtLG5/CR/A83jNTk3cYM29W89Sv
-        OU78nTkzb6pUknVhM+hwI+nO0I42HLmRdDtoRhM23EiqSvTBd3ARXk8xiHLM4iG4xQDyqgLzeMUqxtEC
-        r2kEa3jHLjxEHWpwD3/nxxrwhDlUuZGjZzjc7sJrK7ajZXz18A/7sY9R5Mpr8eQO/8ABPNA5YiuD9+zw
-        Gwzjpy7htZjDzQMtRcvvTcD7Xg/r3+qEB/Fa/MDH8IJaxOYH1I3Dr5/yqxFbuMIyfFex+V+PsYAhNwrs
-        BOlry8rv9Qo8TbUbBbaInmiZ3RR8aIptBpPRMrvpoNhi5/g0vgXXRUrPcWamR/RGy0RyljMz+Q3ag9/p
-        uFP9hTOclfNZKPWfpVKfVzNP6We2GuUAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

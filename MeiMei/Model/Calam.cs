@@ -10,6 +10,7 @@ namespace MeiMei.Model
     {
         public int ID { get; set; }
         public int NhanVienID { get; set; }
+        public string HoTen { get; set; }
         public DateTime NgayLamViec { get; set; }
         public TimeSpan GioBatDau { get; set; }
         public TimeSpan GioKetThuc { get; set; }
@@ -21,10 +22,11 @@ namespace MeiMei.Model
         }
 
         // Constructor với các tham số
-        public Calam(int id, int id_nv, DateTime ngaylamviec, TimeSpan giobatdau, TimeSpan gioketthuc, int trangthai)
+        public Calam(int id, int id_nv,String hoten ,DateTime ngaylamviec, TimeSpan giobatdau, TimeSpan gioketthuc, int trangthai)
         {
             this.ID = id;
             this.NhanVienID = id_nv;
+            this.HoTen = hoten;
             this.NgayLamViec = ngaylamviec;
             this.GioBatDau = giobatdau;
             this.GioKetThuc = gioketthuc;

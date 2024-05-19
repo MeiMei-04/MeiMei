@@ -28,5 +28,24 @@ namespace MeiMei.views
             panel3.Controls.Clear();
             panel3.Controls.Add(foder);
         }
+
+        private void label1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            fThongTinNhanVien fThongTinNhanVien =  new fThongTinNhanVien();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(fThongTinNhanVien);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var thongbao = MessageBox.Show("Bạn Có Muốn Đăng Xuất Không", "Thông Báo", MessageBoxButtons.YesNo);
+            if (thongbao == DialogResult.Yes)
+            {
+                SessionManager.logout();
+                this.Close();
+                flogin flogin = new flogin();
+                flogin.Show();
+            }
+        }
     }
 }

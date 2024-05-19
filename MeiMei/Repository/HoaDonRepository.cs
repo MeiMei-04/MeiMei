@@ -80,6 +80,8 @@ namespace MeiMei.Repository
                                 NhanVienID = Convert.ToInt32(reader["id_nv"]),
                                 //NgayTao = Convert.ToDateTime("ngaytao"),
                                 //NgayThanhToan = Convert.ToDateTime("ngaythanhtoan"),
+                                NgayTao = ((DateTime)reader["ngaytao"]).Date,
+                                NgayThanhToan = reader["ngaythanhtoan"] != DBNull.Value ? ((DateTime)reader["ngaythanhtoan"]).Date : (DateTime?)null,
                                 TongTien = Convert.ToInt32(reader["tongtien"]),
                                 TrangThai = Convert.ToInt32(reader["trangthai"])
                             };
@@ -90,7 +92,58 @@ namespace MeiMei.Repository
             }
             return list;
         }
+        public void thanhtoan(int idhd,int tongtien)
+        {
+            string query = "UPDATE HoaDon set trangthai = 2, tongtien = @tongtien,ngaythanhtoan = @ngaythanhtoan where id = @idhd";
+            using (SqlConnection conn = new SqlConnection(connectString))
+            {
+                conn.Open();
 
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@idhd", idhd);
+                    command.Parameters.AddWithValue("@tongtien", tongtien);
+                    command.Parameters.AddWithValue("@ngaythanhtoan", DateTime.Now);
+                    int row = command.ExecuteNonQuery();
+                    if (row > 0)
+                    {
+                        Console.WriteLine("Thanh Toán Thành Công");
+                    }
+                }
+            }
+        }
+        public List<HoaDon> GetHoaDonListAll()
+        {
+            List<HoaDon> list = new List<HoaDon>();
+            string query = "Select HoaDon.id,HoaDon.id_nv,NhanVien.hoten,HoaDon.tenban,HoaDon.ngaytao,HoaDon.ngaythanhtoan,HoaDon.tongtien,HoaDon.trangthai From HoaDon\r\njoin NhanVien\r\non HoaDon.id_nv = NhanVien.id";
+            using (SqlConnection conn = new SqlConnection(connectString))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            HoaDon hoaDon = new HoaDon
+                            {
+                                ID = Convert.ToInt32(reader["id"]),
+                                TenBan = reader["tenban"].ToString(),
+                                NhanVienID = Convert.ToInt32(reader["id_nv"]),
+                                HoTen = reader["hoten"].ToString(),
+                                NgayTao = ((DateTime)reader["ngaytao"]).Date,
+                                NgayThanhToan = reader["ngaythanhtoan"] != DBNull.Value ? ((DateTime)reader["ngaythanhtoan"]).Date : (DateTime?)null,
+                                TongTien = Convert.ToInt32(reader["tongtien"]),
+                                TrangThai = Convert.ToInt32(reader["trangthai"])
+                            };
+                            list.Add(hoaDon);
+                        }
+                    }
+                }
+            }
+            return list;
+        }
     }
 
 }
