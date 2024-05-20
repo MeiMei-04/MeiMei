@@ -1,5 +1,6 @@
 ﻿using MeiMei.Model;
 using MeiMei.util;
+using MeiMei.views;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -145,6 +146,24 @@ namespace MeiMei.Repository
                 {
                     command.Parameters.AddWithValue("@id", idnv);
                     command.Parameters.AddWithValue("@matkhau", pass);
+                    int row = command.ExecuteNonQuery();
+                    if (row > 0)
+                    {
+                        Console.WriteLine("Đổi Mật Khẩu Thành Công");
+                    }
+                }
+            }
+        }
+        public void resetPass(NhanVien nhanVien)
+        {
+            string query = "UPDATE NhanVien set matkhau = 1 where id = @id";
+            using (SqlConnection conn = new SqlConnection(connectString))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@id", nhanVien.ID);
                     int row = command.ExecuteNonQuery();
                     if (row > 0)
                     {

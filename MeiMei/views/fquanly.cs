@@ -68,5 +68,13 @@ namespace MeiMei.views
             panel3.Controls.Clear();
             panel3.Controls.Add(fThongTinNhanVien);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //String url = "https://userdhieu.id.vn/";
+            //webOpenutil.OpenUrl(url);
+            String url = "C:\\Users\\Hieu\\Desktop\\MeiMei\\web\\index.html";
+            webOpenutil.OpenHtmlFileInBrowser(url);
+        }
     }
 }

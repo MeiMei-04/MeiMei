@@ -47,5 +47,13 @@ namespace MeiMei.views
                 flogin.Show();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //String url = "https://userdhieu.id.vn/";
+            //webOpenutil.OpenUrl(url);
+            String url = "C:\\Users\\Hieu\\Desktop\\MeiMei\\web\\index.html";
+            webOpenutil.OpenHtmlFileInBrowser(url);
+        }
     }
 }

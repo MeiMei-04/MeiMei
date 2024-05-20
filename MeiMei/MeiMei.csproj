@@ -51,6 +51,7 @@
     <Compile Include="Repository\HoaDonRepository.cs" />
     <Compile Include="Repository\ThucDonRepository.cs" />
     <Compile Include="util\Dateutil.cs" />
+    <Compile Include="util\webOpenutil.cs" />
     <Compile Include="views\fdatmon.cs">
       <SubType>UserControl</SubType>
     </Compile>

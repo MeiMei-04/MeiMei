@@ -98,5 +98,16 @@ namespace MeiMei.views
             txtTenDangNhap.Text = null;
             comboBox1.SelectedIndex = 0;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NhanVien nhanVien = getForm();
+            if(nhanVien.ID < 0)
+            {
+                return;
+            }
+            nhanVienRepository.resetPass(nhanVien);
+            fillTableNhanVien();
+        }
     }
 }
