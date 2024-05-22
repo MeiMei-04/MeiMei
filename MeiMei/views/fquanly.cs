@@ -73,7 +73,7 @@ namespace MeiMei.views
         {
             //String url = "https://userdhieu.id.vn/";
             //webOpenutil.OpenUrl(url);
-            String url = "C:\\Users\\Hieu\\Desktop\\MeiMei\\web\\index.html";
+            String url = Config.geturlfileWeb();
             webOpenutil.OpenHtmlFileInBrowser(url);
         }
     }
